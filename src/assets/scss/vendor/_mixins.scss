@@ -1,0 +1,37 @@
+@mixin pseudoLineLeft($px) {
+    &::before {
+        content: '';
+        display: block;
+        width: $px;
+        height: 1px;
+        background-color: $secondary;
+        position: absolute;
+        top: 50%;
+        left: -($px+15px);
+    }
+}
+@mixin pseudoLineRight($px) {
+    &::before {
+        content: '';
+        display: block;
+        width: $px;
+        height: 1px;
+        background-color: $secondary;
+        position: absolute;
+        top: 50%;
+        right: -65px;
+    }
+}
+@mixin pseudoLineBottom($px) {
+    &::after {
+        content: '';
+        display: block;
+        width: $px;
+        height: 1px;
+        background-color: $secondary;
+        background-color:  #C4C0B6;
+        position: absolute;
+        bottom: -7px;
+    
+    }
+}
